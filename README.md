@@ -1,5 +1,4 @@
 # REMder
-# REMder
 
 REMder is a Python-based terminal application. It is distributed under the MIT License.
 
@@ -24,3 +23,6 @@ REMder is a Python-based terminal application. It is distributed under the MIT L
    simply open the release section in the repository
    download the .exe file
    run it!
+
+## How to Start?
+Just open the app, press **_s_** in ur keyboard, and now it's your beginning!
