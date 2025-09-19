@@ -47,7 +47,7 @@ class DeadlineStuff:
         return obj
 
 class StartupThing(Screen):
-    BINDINGS=[Binding("s","startup","Start"),Binding("q","quit","Quit"),Binding("escape","quit","Quit")]
+    BINDINGS=[Binding("s","start_now","Start"),Binding("q","app.quit","Quit"),Binding("escape","app.quit","Quit")]
     def compose(self)->ComposeResult:
         with Container(id="startup-box"):
             yield Static("REMder",id="big-title")
@@ -62,7 +62,8 @@ class StartupThing(Screen):
     @on(Button.Pressed,"#exit-btn")
     def quit(self)->None:
         self.app.exit()
-
+    def action_start_now(self)->None:
+        self.app.push_screen(MainThing())
 class PopupThing(ModalScreen):
     def __init__(self):
         super().__init__()
@@ -114,8 +115,8 @@ class PopupThing(ModalScreen):
         self.dismiss(None)
 
 class MainThing(Screen):
-    BINDINGS=[Binding("a","create_task","Add Task"),Binding("d","remove_task","Delete Task"),
-              Binding("q","go_back","Back to Welcome"),Binding("escape","go_back","Back to Welcome")]
+    BINDINGS=[Binding("a","add_new_task","Add Task"),Binding("d","delete_task","Delete Task"),
+                Binding("ctrl q","go_back","Close whole app"),Binding("escape","go_back","Close whole app")]
     def __init__(self):
         super().__init__()
         self.stuff_list:List[DeadlineStuff]=[]
@@ -165,6 +166,15 @@ class MainThing(Screen):
             self.update_display()
     def go_back(self)->None:
         self.app.pop_screen()
+    def action_add_new_task(self)->None:
+        self.app.push_screen(PopupThing(),self.handle_new_task)
+
+    def action_delete_task(self)->None:
+        table=self.query_one("#stuff-table")
+        if table.cursor_row<len(self.stuff_list):
+            del self.stuff_list[table.cursor_row]
+            self.save_to_disk()
+            self.update_display()
     def save_to_disk(self)->None:
         try:
             data=[item.serialize() for item in self.stuff_list]
