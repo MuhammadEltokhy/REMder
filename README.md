@@ -21,7 +21,7 @@ This README explains the design, installation, usage, file formats, and developm
    ```bash
    git clone https://github.com/MuhammadEltokhy/REMder.git
    cd REMder
-   exit
+   ```
    Then, download the only 2 needed packeges throught pip (assuming u have a pip version that is or higher than 3.0).
    ```bash
    pip install textual
