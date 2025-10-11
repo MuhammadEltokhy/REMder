@@ -39,6 +39,6 @@ Just open the app, press **_s_** in ur keyboard, and now it's your beginning!
 * Save the deadline, and congratulations! This s ur 1st deadline task!
 
 ## A Small Vid for Tutorial
-[Download this raw video and watch(https://github.com/MuhammadEltokhy/REMder/blob/main/thumbnail.png)](https://github.com/MuhammadEltokhy/REMder/blob/main/demo%20trial.mkv)
+[Download this raw video and watch(https://github.com/MuhammadEltokhy/REMder/blob/main/thumbnail.png?raw=true)](https://github.com/MuhammadEltokhy/REMder/blob/main/demo%20trial.mkv)
 
 
