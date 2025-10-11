@@ -36,4 +36,9 @@ Just open the app, press **_s_** in ur keyboard, and now it's your beginning!
 * All shortcut keys found in the footer widget of the app.
 * When press **_a_**, a small window would open for u to add a new deadline.
 * You r able to make a new name for ur dead, choose the dead itself, and optionally choose which sound u'd like to have in ur alarms.
-* Save the deadline, and congratulations! This s ur 1st deadline task!  
+* Save the deadline, and congratulations! This s ur 1st deadline task!
+
+## A Small Vid for Tutorial
+[![Watch the video]](https://github.com/MuhammadEltokhy/REMder/blob/main/demo%20trial.mkv)
+
+
